@@ -17,7 +17,8 @@ import (
 
 type client struct {
 	client  *http.Client
-	cookie  *http.Cookie
+	headers map[string]string
+	cookies map[string]string
 	baseUrl string
 }
 
@@ -48,7 +49,7 @@ type chapterResponse struct {
 	Data         map[string]string `json:"data"`
 }
 
-func NewClient(baseUrl string) *client {
+func NewClient(baseUrl string, headers map[string]string, cookies map[string]string) *client {
 	cookieJar, _ := cookiejar.New(nil)
 
 	return &client{
@@ -57,6 +58,8 @@ func NewClient(baseUrl string) *client {
 			Timeout: time.Second * 20,
 		},
 		baseUrl: baseUrl,
+		headers: headers,
+		cookies: cookies,
 	}
 }
 
@@ -66,8 +69,8 @@ func (a *client) newRequest(method, url string, body io.Reader) (*http.Response,
 		log.Fatal("Error reading request. ", err)
 	}
 
-	a.setHeaders(req)
-	a.addAuthCookie(req) // TODO add login command
+	a.setHeaders(req, a.headers)
+	a.addAuthCookie(req, a.cookies)
 
 	// Send request
 	resp, err := a.client.Do(req)
@@ -185,4 +188,16 @@ func (a *client) GetChapters(bookId string) *epub.Epub {
 	bar.Finish()
 
 	return e
+}
+
+func (a *client) setHeaders(req *http.Request, headers map[string]string) {
+	for key, value := range headers {
+		req.Header.Add(key, value)
+	}
+}
+
+func (a *client) addAuthCookie(req *http.Request, cookies map[string]string) {
+	for key, value := range cookies {
+		req.AddCookie(&http.Cookie{Name: key, Value: value})
+	}
 }

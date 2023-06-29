@@ -1,0 +1,16 @@
+curl 'https://author.today/' \
+  -H 'authority: author.today' \
+  -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \
+  -H 'accept-language: en-AU,en;q=0.9,ru-BY;q=0.8,ru;q=0.7,en-GB;q=0.6,en-US;q=0.5' \
+  -H 'cache-control: max-age=0' \
+  -H 'cookie: mobile-mode=false; CSRFToken=vgF1trZHF8qfakNFvnGY6T5BvZdpuzRR6b774NHs695OVy_-68uskOFKNGPAMAdu44VPTMBaKEGwOt24JpjdckPQDVM1; ngSessnCookie=AAAAAOnRIGNMlniCAdtmBw==; stLoginCookie=h4V5OUtxXQC0kKjqypnDHdXtDUuL-N5wObXP3NHaXcZZVmbsnQ08re8BomyZxGNTgv24709U2UQ3TfBgduKB3KsCMNAFflBbseGXmQiN3DKHOkLcgZgoG6J5phacuwOMjuSOCW4VkQp0_87qzobeMrvcJQhkBcVf9S1hdCFBDzS1sTjmKkcNIm3cu0j_OH-EHl5aLDx7kPHlxdMKvGOEL_zg7neXtdgFfL5mCwPFakA5b_1JkhyocxXgcXu_5tMcBqyvHJyfAcjZ1I1OuiBhwcmozTMEhdkwkNcp5stvzBnbfnIjoOZVtNwjkwrLpsrP_rG4CHh1rpn8VQWXheHGNsJ3uqG1cbZlA5tw84ovEOg4CFhh3zVIo2lfgAPCbMMR_LgYWLfITi43BzCgBdh7IDc26EGN638CZqlsBxHUzwoTZvv_W1VNL0TuvY2jHAZVqY4bPozD624qAIv-fcN0Qk5ciuQigyBJRP3vxEMJhDTi7Fg7668utU5be5RMGWEYzP0awrucKwOH1PTwV1NO505zqjUapvkU1JJU8cn-TNIrP88iszdbRzR9xlkdcrjECkLMBFwFAH2dupgKU_MF7UXxNHA; LoginCookie=g7R_1sLPjUFPUjzvYgx3sb06Br4oPdmXJuH5vQfQMNxjnpHjhWh4-DA59wZ6rmcmnAroP4rXvDDSYOkSvTlKlszjSErV56zSfa7ZusqcBPF_AgVSQFFF3WjCl95YFPU6pb7E86y3aI_DoNMKnmNmUUQTaa-6uXfns1pQ_gHciG3IptrfwYrU9Ou6Yvb6SfnYc874HTyfo9hpV5wVweA1eXimjOwRDbE_dDNGpDlinhu6Loge1U6w7nDHSEO66hKpyW5HXb5p221uAsToeZRyIuYJRjsRP-Cr0toTPLsGv-7wagzRoj4BAyHT2X5zz2hjthQnqb7HchLtWGgm-D4467jmcp8zhPp4R_NfP98L5udy9LHxsoQuhl0N3bRv3yKFsCj6hvcefrW548CZprkiZDiNDjuOVcBCLTGIOLpbKsYgA8dLHUYBSNmwJcPEvQnq5VhBaBDye4iETcg55nXFuTA5FFuuLiZ-OwMzIgDURk_l5xosnZCYgPuiekPfhCgETDpes32Y4MeJn419UVd08aNZRcn86FlHwynVfAG8UR018ttej7dSek9Z4r1QLMS1trqT9LbMpOxO-LOKpRjOmljVbb0; ngLoginCookie=91131782731ca19098c48f28ff8b9b80; cf_clearance=BDYQIi8eflPwswtTpzNQweAGugGFeieMH2_FtSyD1eA-1687810864-0-150; country_code=EE; backend_route=web08' \
+  -H 'sec-ch-ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'sec-fetch-dest: document' \
+  -H 'sec-fetch-mode: navigate' \
+  -H 'sec-fetch-site: none' \
+  -H 'sec-fetch-user: ?1' \
+  -H 'upgrade-insecure-requests: 1' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36' \
+  --compressed
